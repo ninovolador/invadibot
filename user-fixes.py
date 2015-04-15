@@ -334,6 +334,7 @@ fixes['inva-wp-es'] = {
         (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Ff]ormat(\s*=.*?})', ur'\1formato\2'),
         (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Ii][Dd](\s*=.*?})', ur'\1id\2'),
         (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Ii][Ss][Bb][Nn](\s*=.*?})', ur'\1isbn\2'),
+        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Ii]diomas(\s*=.*?})', ur'\1idioma\2'),
         (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Ii]ssue(\s*=.*?})', ur'\1número\2'),
         (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Jj]ournal(\s*=.*?})', ur'\1publicación\2'),
         (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Ll]anguage(\s*=.*?})', ur'\1idioma\2'),
