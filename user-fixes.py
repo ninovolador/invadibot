@@ -370,12 +370,12 @@ fixes['inva-wp-es'] = {
         (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Ww]ork(\s*=.*?})', ur'\1obra\2'),
         (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Yy]ear(\s*=.*?})', ur'\1año\2'),
         (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)U(?:RL|rl)(\s*=.*?})', ur'\1url\2'),
-        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Dd]oi\s*=\s*doi\s*:(\s*.*?})', ur'\1doi\s=\s\2'),
-        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Dd]oi\s*=\s*([0-9./]*)(?:\.(\s|\|))(\s*.*?})', ur'\1doi\s=\s\2\3\4'),
-        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Dd]oi\s*=\s*https*\:\/\/dx\.doi\.org\/(\s*.*?})', ur'\1doi\s=\s\2'),
-        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)(?:PMID|pmid)\s*=\s*PMID\s*:*\s*(\s*.*?})', ur'\1pmid\s=\s\2'),
-        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)(?:PMID|pmid)\s*=\s*([0-9]*)\.(\s*.*?})', ur'\1pmid\s=\s\2\3'),
-        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)(?:PMID|pmid)\s*=\s*PMC\s*:*\s*(\s*.*?})', ur'\1pmc\s=\s\2'),
+        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Dd]oi\s*=\s*doi\s*:(.*?})', ur'\1doi = \2'),
+        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Dd]oi\s*=\s*([\w./()]{1,45})\.(\s|\||})(.*?})', ur'\1doi = \2\3\4'),
+        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)[Dd]oi\s*=\s*https?://dx\.doi\.org/(.*?})', ur'\1doi = \2'),
+        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)(?:PMID|pmid)\s*=\s*PMID\s*:*\s*(.*?})', ur'\1pmid = \2'),
+        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)(?:PMID|pmid)\s*=\s*([0-9]*)\.(.*?})', ur'\1pmid = \2\3'),
+        (ur'({{[\s_]*(?:[Pp]lantilla[\s_]*:|[Tt]emplate[\s_]*:)?[\s_]*[Cc]ita[ _](?:libro|noticia|publicación|web)[^}]*?\|\s*)(?:PMID|pmid)\s*=\s*PMC\s*:*\s*(.*?})', ur'\1pmc = \2'),
 
 
         # Traducir ubicaciones (en orden alfabético en español)
