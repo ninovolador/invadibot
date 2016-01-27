@@ -286,15 +286,17 @@ P_INICIO         = (ur"{{[\s_]*(?:[Pp]lantilla[\s_]*:"
 P_INICIO_NC      = (ur"{{[\s_]*(?:plantilla[\s_]*:"
                               ur"|template[\s_]*:"
                     ur")?[\s_]*")
-P_CITA_INICIO    = (ur"%s[Cc]ita[ _](?:libro"
+P_CITA_INICIO    = (ur"%s(?:[Cc]ita[ _](?:libro"
                                    ur"|noticia"
                                    ur"|publicación"
                                    ur"|web"
+                    ur")|[Oo]bra[ _]citada"
                     ur")[^}]*?\|\s*") % P_INICIO
-P_CITA_INICIO_NC = (ur"%scita[ _](?:libro"
+P_CITA_INICIO_NC = (ur"%s(?:cita[ _](?:libro"
                                 ur"|noticia"
                                 ur"|publicación"
                                 ur"|web"
+                    ur")|obra[ _]citada"
                     ur")[^}]*?\|\s*") % P_INICIO_NC
 
 fixes['inva-wp-es'] = {
@@ -312,7 +314,9 @@ fixes['inva-wp-es'] = {
         (ur'(?i)%sinvadibot[^}]*?}}\s*(.)' % P_INICIO_NC, ur'\1'),
 
         # Pasar a {{cita libro}}
-        (ur'%s[Cc]it[ae][ _]*book([\s_]*[}\|])' % P_INICIO, ur'{{cita libro\1'),
+        ((ur'%s(?:[Cc]it[ae][ _]*book'
+              ur'|[Rr]ef[- ]libro'
+              ur')([\s_]*[}\|])' ) % P_INICIO, ur'{{cita libro\1'),
         # Pasar a {{cita noticia}}
         (ur'%s[Cc]it[ae][\s_]*[Nn]ews([\s_]*[}\|])' % P_INICIO, ur'{{cita noticia\1'),
         # Pasar a {{cita publicación}}
